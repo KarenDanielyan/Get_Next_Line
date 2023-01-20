@@ -6,13 +6,14 @@
 /*   By: kdaniely <kdaniely@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/20 17:24:26 by kdaniely          #+#    #+#             */
-/*   Updated: 2023/01/20 17:26:14 by kdaniely         ###   ########.fr       */
+/*   Updated: 2023/01/21 00:57:53 by kdaniely         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line.h"
 
-void	get_next_line(void)
+char	*get_next_line(int fd)
 {
-
+	(void)fd;
+	return (NULL);
 }

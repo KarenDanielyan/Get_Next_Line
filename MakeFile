@@ -1,4 +1,6 @@
+SHELL		=		bash
+
 all:	
 		@echo Building All..
-		@pushd src && $(MAKE) -f Makefile
+		@pushd src && $(MAKE) -f makefile
 		@pushd test && $(MAKE) -f Makefile

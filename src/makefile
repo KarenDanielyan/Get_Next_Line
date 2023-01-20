@@ -1,6 +1,6 @@
 NAME		=	lib_gnl.so	
 
-DEP			= 	$(wildcard *.h) Makefile
+DEP			= 	$(wildcard *.h) makefile
 
 BDIR		=	../bin/
 

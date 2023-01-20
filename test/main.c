@@ -6,7 +6,7 @@
 /*   By: kdaniely <kdaniely@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/20 14:29:41 by kdaniely          #+#    #+#             */
-/*   Updated: 2023/01/20 18:29:31 by kdaniely         ###   ########.fr       */
+/*   Updated: 2023/01/21 00:52:39 by kdaniely         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,6 @@
 int main(void)
 {
 	printf("Hello World\n");
-	get_next_line();
+	//get_next_line();
 	return (0);
 }
