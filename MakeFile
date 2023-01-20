@@ -1,0 +1,4 @@
+all:	
+		@echo Building All..
+		@pushd src && $(MAKE) -f Makefile
+		@pushd test && $(MAKE) -f Makefile
