@@ -6,11 +6,14 @@
 /*   By: kdaniely <kdaniely@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/20 20:15:49 by kdaniely          #+#    #+#             */
-/*   Updated: 2023/01/21 00:58:44 by kdaniely         ###   ########.fr       */
+/*   Updated: 2023/01/21 16:49:41 by kdaniely         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	helper(void)
+#include "get_next_line.h"
+
+void	ft_getchar(int	fd)
 {
-	
+	char *buf = NULL;
+	assert(read(fd, buf, 1) != -1);
 }
