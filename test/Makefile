@@ -10,7 +10,7 @@ CC 			= 	gcc
 
 RM			=	rm -f
 
-CFLAGS		=	-g -fPIC -Wall -Wextra -Werror -Wpedantic
+CFLAGS		=	-g -fPIC -Wall -Wextra -Werror -Wpedantic -D BUFFER_SIZE=10
 
 IFLAGS		=	-I./ -I../src/
 

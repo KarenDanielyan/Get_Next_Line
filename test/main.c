@@ -6,7 +6,7 @@
 /*   By: kdaniely <kdaniely@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/20 14:29:41 by kdaniely          #+#    #+#             */
-/*   Updated: 2023/01/21 16:50:50 by kdaniely         ###   ########.fr       */
+/*   Updated: 2023/01/22 21:47:21 by kdaniely         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,13 @@
 
 int main(void)
 {
-	char	buf[BUFSIZ];
-	int		n;
+	int		count;
+	int		fd;
 
-	ft_getchar(0);
-	while ((n = read(STDIN_FILENO, buf, BUFSIZ)))
-		write(STDOUT_FILENO, buf, n);
+	fd = open("../tessaract", O_RDONLY, 0);
+	lseek(fd, 0, SEEK_SET);
+	count = 5;
+	while (count--)
+		printf("Line %d: %s\n", (5 - count), get_next_line(fd));
 	return (0);
 }
