@@ -6,7 +6,7 @@
 /*   By: kdaniely <kdaniely@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/20 17:24:26 by kdaniely          #+#    #+#             */
-/*   Updated: 2023/01/22 22:57:30 by kdaniely         ###   ########.fr       */
+/*   Updated: 2023/01/23 01:15:36 by kdaniely         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,11 +20,14 @@ char	*get_next_line(int fd)
 	char			*str;
 	size_t			len;
 
-	if (!ft_strchr(line_feed, '\n'))
+	while (!ft_strchr(line_feed, '\n'))
 	{	
 		if (read(fd, buf, BUFSIZ) == -1)
 			return (NULL);
-		line_feed = ft_strdup(buf);
+		to_free = ft_strjoin(line_feed, ft_strdup(buf));
+		if (line_feed)
+			free(line_feed);
+		line_feed = to_free;
 	}
 	len = (int)(ft_strchr(line_feed, '\n') - line_feed);
 	str = ft_substr(line_feed, 0, len);

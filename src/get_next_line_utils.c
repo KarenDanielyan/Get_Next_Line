@@ -6,7 +6,7 @@
 /*   By: kdaniely <kdaniely@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/20 20:15:49 by kdaniely          #+#    #+#             */
-/*   Updated: 2023/01/22 22:57:47 by kdaniely         ###   ########.fr       */
+/*   Updated: 2023/01/23 01:45:09 by kdaniely         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,26 +17,12 @@ size_t	ft_strlen(const char *s)
 	size_t	len;
 
 	len = 0;
-	while (*(s + len))
-		len++;
-	return (len);
-}
-
-size_t	ft_strlcpy(char *dst, const char *src, size_t size)
-{
-	size_t	i;
-
-	i = 0;
-	if (size)
+	if (s)
 	{
-		while (i < (size - 1) && *(src + i))
-		{
-			*(dst + i) = *(src + i);
-			i ++;
-		}
-		*(dst + i) = '\0';
+		while (*(s + len))
+			len++;
 	}
-	return (ft_strlen(src));
+	return (len);
 }
 
 char	*ft_strdup(const char *s)
@@ -101,4 +87,32 @@ char	*ft_strchr(const char *str, int c)
 		return (buf);
 	else
 		return (NULL);
+}
+
+char	*ft_strjoin(char const *s1, char const *s2)
+{
+	size_t	len1;
+	size_t	len2;
+	size_t	i;
+	char	*join;
+
+	len1 = ft_strlen(s1);
+	len2 = ft_strlen(s2);
+	join = (char *)malloc((len1 + len2 + 1) * sizeof(char));
+	if (!join)
+		return (NULL);
+	i = 0;
+	while (i < len1)
+	{
+		*(join + i) = *(s1 + i);
+		i++;
+	}
+	i = 0;
+	while (i < len2)
+	{
+		*(join + len1 + i) = *(s2 + i);
+		i++;
+	}
+	*(join + len1 + len2) = '\0';
+	return (join);
 }
