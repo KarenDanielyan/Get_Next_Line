@@ -6,6 +6,10 @@ BDIR		=	../bin/
 
 SOURCES		=	$(wildcard *.c)
 
+BONUS		=	$(wildcard *_bonus.c)
+
+FILTER		=	$(filter-out $(BOUNUS), $(SOURCES))
+
 CC 			= 	gcc
 
 RM			=	rm -f
@@ -16,9 +20,9 @@ IFLAGS		=	-I./
 
 all:		$(BDIR)$(NAME)
 
-$(BDIR)$(NAME):	$(SOURCES) $(DEP)
+$(BDIR)$(NAME):	$(FILTER) $(DEP)
 				@echo Building Library...
-				$(CC) $(SOURCES) $(CFLAGS) -o $(BDIR)$(NAME) $(IFLAGS) 
+				$(CC) $(FILTER) $(CFLAGS) -o $(BDIR)$(NAME) $(IFLAGS) 
 
 clean:
 				$(RM) $(BDIR)$(NAME)
