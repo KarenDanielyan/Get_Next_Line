@@ -6,7 +6,7 @@
 /*   By: kdaniely <kdaniely@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/20 14:29:41 by kdaniely          #+#    #+#             */
-/*   Updated: 2023/01/22 21:47:21 by kdaniely         ###   ########.fr       */
+/*   Updated: 2023/01/23 19:22:02 by kdaniely         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,14 @@
 
 int main(void)
 {
-	int		count;
 	int		fd;
+	char *kek;
 
-	fd = open("../tessaract", O_RDONLY, 0);
+	fd = open("../files/empty", O_RDWR);
 	lseek(fd, 0, SEEK_SET);
-	count = 5;
-	while (count--)
-		printf("Line %d: %s\n", (5 - count), get_next_line(fd));
+	kek = get_next_line(fd);
+	free(kek);
+	while(1)
+		;
 	return (0);
 }
