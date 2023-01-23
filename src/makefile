@@ -10,7 +10,7 @@ CC 			= 	gcc
 
 RM			=	rm -f
 
-CFLAGS		=	-g -shared -fPIC -Wall -Wextra -Werror -Wpedantic
+CFLAGS		=	-g -shared -fPIC -Wall -Wextra -Werror -Wpedantic -ggdb -fsanitize=address
 
 IFLAGS		=	-I./
 
