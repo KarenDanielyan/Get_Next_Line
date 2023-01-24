@@ -6,16 +6,16 @@
 /*   By: kdaniely <kdaniely@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/20 14:29:41 by kdaniely          #+#    #+#             */
-/*   Updated: 2023/01/23 20:23:20 by kdaniely         ###   ########.fr       */
+/*   Updated: 2023/01/24 23:09:45 by kdaniely         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "test.h"
 
-int main(void)
+int	main(void)
 {
 	int		fd;
-	char *kek;
+	char	*kek;
 
 	fd = open("../files/empty", O_RDWR);
 	lseek(fd, 0, SEEK_SET);
