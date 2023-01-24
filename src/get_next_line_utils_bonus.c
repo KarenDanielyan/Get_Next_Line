@@ -6,11 +6,11 @@
 /*   By: kdaniely <kdaniely@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/20 20:15:49 by kdaniely          #+#    #+#             */
-/*   Updated: 2023/01/23 20:58:01 by kdaniely         ###   ########.fr       */
+/*   Updated: 2023/01/24 21:43:16 by kdaniely         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line.h"
+#include "get_next_line_bonus.h"
 
 size_t	ft_strlen(const char *s)
 {

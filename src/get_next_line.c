@@ -6,7 +6,7 @@
 /*   By: kdaniely <kdaniely@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/20 17:24:26 by kdaniely          #+#    #+#             */
-/*   Updated: 2023/01/24 12:49:01 by kdaniely         ###   ########.fr       */
+/*   Updated: 2023/01/24 13:04:42 by kdaniely         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,10 @@ char	*feed(int fd, char *line_feed)
 	{
 		r_size = read(fd, buf, BUFFER_SIZE);
 		if (r_size < 0)
+		{
+			free(line_feed);
 			return (NULL);
+		}
 		buf[r_size] = '\0';
 		if (!line_feed)
 			join = ft_strdup(buf);

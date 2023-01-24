@@ -6,7 +6,7 @@
 /*   By: kdaniely <kdaniely@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/20 17:25:53 by kdaniely          #+#    #+#             */
-/*   Updated: 2023/01/23 20:56:02 by kdaniely         ###   ########.fr       */
+/*   Updated: 2023/01/24 22:58:56 by kdaniely         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,6 @@
 # define GET_NEXT_LINE_BONUS_H
 
 # include <limits.h>
-# include <stdio.h>
-# include <stddef.h>
 # include <unistd.h>
 # include <stdlib.h>
 

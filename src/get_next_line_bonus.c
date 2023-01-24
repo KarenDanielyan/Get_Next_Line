@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line.h"
+#include "get_next_line_bonus.h"
 
 char	*feed(int fd, char *line_feed)
 {
@@ -18,18 +18,22 @@ char	*feed(int fd, char *line_feed)
 	char	*join;
 	long	r_size;
 
-	r_size = 1;
-	while (!ft_strchr(line_feed, '\n') && r_size != 0)
+	while (1)
 	{
 		r_size = read(fd, buf, BUFFER_SIZE);
 		if (r_size < 0)
+		{
+			free(line_feed);
 			return (NULL);
+		}
 		buf[r_size] = '\0';
 		if (!line_feed)
 			join = ft_strdup(buf);
 		else
 			join = ft_strjoin (line_feed, buf);
 		line_feed = join;
+		if (ft_strchr(line_feed, '\n') || r_size == 0)
+			break ;
 	}
 	return (line_feed);
 }
