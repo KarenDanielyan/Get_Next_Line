@@ -6,7 +6,7 @@
 /*   By: kdaniely <kdaniely@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/20 17:24:26 by kdaniely          #+#    #+#             */
-/*   Updated: 2023/01/24 23:08:44 by kdaniely         ###   ########.fr       */
+/*   Updated: 2023/01/25 01:43:40 by kdaniely         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,8 @@ char	*feed(int fd, char *line_feed)
 		r_size = read(fd, buf, BUFFER_SIZE);
 		if (r_size < 0)
 		{
-			free(line_feed);
+			if (line_feed)
+				free(line_feed);
 			return (NULL);
 		}
 		buf[r_size] = '\0';
