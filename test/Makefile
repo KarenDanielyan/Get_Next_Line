@@ -10,7 +10,7 @@ CC 			= 	gcc
 
 RM			=	rm -f
 
-CFLAGS		=	-g -fPIC -Wall -Wextra -Werror -Wpedantic -D BUFFER_SIZE=10
+CFLAGS		=	-g -fPIC -Wall -Wextra -Werror -Wpedantic -ggdb -fsanitize=address
 
 IFLAGS		=	-I./ -I../src/
 

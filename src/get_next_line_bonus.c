@@ -41,7 +41,7 @@ char	*get_next_line(int fd)
 	char			*str;
 	size_t			len;
 
-	if (fd < 3 && fd > OPEN_MAX)
+	if (fd < 0 || fd > OPEN_MAX)
 		return (NULL);
 	line_feed[fd] = feed(fd, line_feed[fd]);
 	if (!line_feed[fd])
