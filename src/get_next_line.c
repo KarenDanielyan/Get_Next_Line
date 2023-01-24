@@ -6,7 +6,7 @@
 /*   By: kdaniely <kdaniely@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/20 17:24:26 by kdaniely          #+#    #+#             */
-/*   Updated: 2023/01/24 13:04:42 by kdaniely         ###   ########.fr       */
+/*   Updated: 2023/01/24 23:08:44 by kdaniely         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,11 @@ char	*get_next_line(int fd)
 	size_t			len;
 
 	if (fd < 0 || fd > OPEN_MAX)
+	{
+		if (line_feed)
+			free(line_feed);
 		return (NULL);
+	}
 	line_feed = feed(fd, line_feed);
 	if (!line_feed)
 		return (NULL);
