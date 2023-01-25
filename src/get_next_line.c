@@ -6,13 +6,13 @@
 /*   By: kdaniely <kdaniely@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/20 17:24:26 by kdaniely          #+#    #+#             */
-/*   Updated: 2023/01/25 01:43:40 by kdaniely         ###   ########.fr       */
+/*   Updated: 2023/01/25 13:14:04 by kdaniely         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line.h"
 
-char	*feed(int fd, char *line_feed)
+static char	*feed(int fd, char *line_feed)
 {
 	char	buf[BUFFER_SIZE + 1];
 	char	*join;

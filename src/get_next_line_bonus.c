@@ -12,7 +12,20 @@
 
 #include "get_next_line_bonus.h"
 
-char	*feed(int fd, char *line_feed)
+static void	free_feed(char *line_feed[OPEN_MAX])
+{
+	unsigned short	i;
+
+	i = 0;
+	while (i < OPEN_MAX)
+	{
+		if (line_feed[i])
+			free(line_feed[i]);
+		i++;
+	}
+}
+
+static char	*feed(int fd, char *line_feed)
 {
 	char	buf[BUFFER_SIZE + 1];
 	char	*join;
@@ -46,7 +59,10 @@ char	*get_next_line(int fd)
 	size_t			len;
 
 	if (fd < 0 || fd > OPEN_MAX)
+	{
+		free_feed(line_feed);
 		return (NULL);
+	}
 	line_feed[fd] = feed(fd, line_feed[fd]);
 	if (!line_feed[fd])
 		return (NULL);
