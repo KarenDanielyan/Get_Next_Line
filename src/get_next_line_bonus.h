@@ -6,7 +6,7 @@
 /*   By: kdaniely <kdaniely@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/20 17:25:53 by kdaniely          #+#    #+#             */
-/*   Updated: 2023/01/25 13:14:39 by kdaniely         ###   ########.fr       */
+/*   Updated: 2023/01/25 13:25:05 by kdaniely         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,10 +26,23 @@
 # endif
 
 size_t	ft_strlen(const char *s);
-char	*get_next_line(int fd);
 char	*ft_substr(char const *s, unsigned int start, size_t len);
 char	*ft_strchr(const char *str, int c);
 char	*ft_strdup(const char *s);
 char	*ft_strjoin(char *s1, char *s2);
+
+/*
+*	Reference: DNE
+*
+*	Description: Returns a line read from file pointed by
+*	file descriptor. If fd is invalid, function returns
+*	NULL;
+*	NOTE: In order to not have leaks, run get_next_line() function
+*	with NULL parameter in order to free the static allocated space
+*	before ending program execution.
+*
+*	Return Value: C-standard string with nl, or NULL on invalid fd.
+*/
+char	*get_next_line(int fd);
 
 #endif
