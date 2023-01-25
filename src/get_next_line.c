@@ -6,7 +6,7 @@
 /*   By: kdaniely <kdaniely@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/20 17:24:26 by kdaniely          #+#    #+#             */
-/*   Updated: 2023/01/25 13:31:12 by kdaniely         ###   ########.fr       */
+/*   Updated: 2023/01/25 13:31:53 by kdaniely         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ static char	*feed(int fd, char *line_feed)
 		else
 			join = ft_strjoin (line_feed, buf);
 		line_feed = join;
-		if (ft_strchr(line_feed, '\n'), || r_size == 0)
+		if (ft_strchr(line_feed, '\n') || r_size == 0)
 			break ;
 	}
 	return (line_feed);

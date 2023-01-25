@@ -2,5 +2,5 @@ SHELL		=		bash
 
 all:	
 		@echo Building All..
-		@pushd src && $(MAKE) -f makefile bonus
+		@pushd src && $(MAKE) -f makefile
 		@pushd test && $(MAKE) -f Makefile
