@@ -6,7 +6,7 @@
 /*   By: kdaniely <kdaniely@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/20 14:29:41 by kdaniely          #+#    #+#             */
-/*   Updated: 2023/01/24 23:09:45 by kdaniely         ###   ########.fr       */
+/*   Updated: 2023/01/26 14:06:58 by kdaniely         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,5 +24,6 @@ int	main(void)
 	kek = get_next_line(-1);
 	close(fd);
 	kek = get_next_line(fd);
+	kek = get_next_line(-42);
 	return (0);
 }

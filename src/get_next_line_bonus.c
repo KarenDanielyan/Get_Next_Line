@@ -59,6 +59,8 @@ char	*get_next_line(int fd)
 	size_t			len;
 
 	if (fd < 0 || fd > OPEN_MAX)
+		return (NULL);
+	if (fd == -42)
 	{
 		free_feed(line_feed);
 		return (NULL);

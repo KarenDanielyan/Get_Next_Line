@@ -6,7 +6,7 @@
 /*   By: kdaniely <kdaniely@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/20 17:25:53 by kdaniely          #+#    #+#             */
-/*   Updated: 2023/01/25 13:25:05 by kdaniely         ###   ########.fr       */
+/*   Updated: 2023/01/26 14:04:23 by kdaniely         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ char	*ft_strjoin(char *s1, char *s2);
 *	file descriptor. If fd is invalid, function returns
 *	NULL;
 *	NOTE: In order to not have leaks, run get_next_line() function
-*	with NULL parameter in order to free the static allocated space
+*	with -42 parameter in order to free the static allocated space
 *	before ending program execution.
 *
 *	Return Value: C-standard string with nl, or NULL on invalid fd.
